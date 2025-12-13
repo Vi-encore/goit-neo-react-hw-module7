@@ -1,0 +1,21 @@
+.item {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px;
+  border: 1px solid #242424;
+  border-radius: 8px;
+}
+
+.item-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+
+  gap: 5px;
+}
+
