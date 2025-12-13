@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { FaUser, FaPhoneAlt } from "react-icons/fa";
 import css from "./Contact.module.css";
 
@@ -17,4 +18,13 @@ export default function Contact({ contact: { id, name, number }, onDelete }) {
       <button onClick={() => onDelete(id)}>Delete</button>
     </li>
   );
+}
+
+Contact.propTypes = {
+  contact: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired
+  }).isRequired,
+  onDelete: PropTypes.func.isRequired
 }
