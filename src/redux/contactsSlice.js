@@ -1,5 +1,5 @@
 import { createSelector, createSlice } from "@reduxjs/toolkit";
-import { fetchContacts, addContact, deleteContact } from "./contactOps";
+import { fetchContacts, addContact, deleteContact } from "./contactsOps";
 import { selectNameFilter } from "./filtersSlice";
 
 const handlePending = (state) => {

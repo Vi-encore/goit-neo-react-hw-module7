@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { FaUser, FaPhoneAlt } from "react-icons/fa";
 import css from "./Contact.module.css";
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contactOps";
+import { deleteContact } from "../../redux/contactsOps";
 
 export default function Contact({ contact: { id, name, number } }) {
   const dispatch = useDispatch();
