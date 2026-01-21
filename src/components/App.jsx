@@ -1,19 +1,25 @@
 import ContactForm from "./ContactForm/ContactForm";
 import SearchBox from "./SearchBox/SearchBox";
 import ContactList from "./ContactList/ContactList";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { fetchContacts } from "../redux/contactOps";
 import "./App.css";
-import { useSelector } from "react-redux";
 
 function App() {
-  const contacts = useSelector((state) => state.contacts.items);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
 
   return (
-    <div>
+    <>
       <h1>Phonebook</h1>
       <ContactForm />
-      {contacts.length > 0 && <SearchBox />}
+      <SearchBox />
       <ContactList />
-    </div>
+    </>
   );
 }
 
